@@ -63,7 +63,7 @@ class DBHelper extends DBConnection implements IDb {
 				'address' => $row['address'],
 				'ping' => (int)$row['ping'],
 				'score' => (int)$row['score'],
-				'date_update' => $row['date_update'] === '0000-00-00 00:00:00' ? null : $row['date_update'],
+				'date_update' => $row['date_update'],
 
 				//TODO Дублирование кода
 				'hide_enum' => array_key_exists($row['hide_enum'], $hideEnum) ? $hideEnum[$row['hide_enum']] : null,
